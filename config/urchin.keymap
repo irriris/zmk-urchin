@@ -7,17 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include "keymap_italian.h"
-
-// Layer definitions
-
-#define BASE 0
-#define SYM 1
-#define EXT 2
-#define FNC 3
-#define SYM2 4
-#define ACCENT 5
-#define SETTINGS 6
 
 // -----------------
 
@@ -35,10 +24,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        // both right thumb keys
-        // internal-left & external-right thumb keys
-        // both left thumb keys
 
         mo_Setting {
             timeout-ms = <200>;
