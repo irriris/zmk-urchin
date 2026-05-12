@@ -42,7 +42,6 @@
             hold-trigger-on-release;
         };
     };
-};
 
     macros {
         // sometimes my device thinks a modifier is being held down
