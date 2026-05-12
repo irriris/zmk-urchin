@@ -25,7 +25,7 @@
             flavor = "balanced";
             require-prior-idle-ms = <175>;
             tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
@@ -36,7 +36,7 @@
             flavor = "balanced";
             require-prior-idle-ms = <175>;
             tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
