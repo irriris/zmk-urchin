@@ -49,8 +49,41 @@
     };
 
     macros {
-        // sometimes my device thinks a modifier is being held down
-        // pressing all modifiers fixes it.
+        bt_us_0: bt_us_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_ls_off &bt BT_SEL 0>;
+        };
+
+        bt_us_1: bt_us_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_ls_off &bt BT_SEL 1>;
+        };
+
+        bt_us_2: bt_us_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_ls_off &bt BT_SEL 2>;
+        };
+
+        bt_jp_3: bt_jp_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_ls_on &bt BT_SEL 3>;
+        };
+
+        bt_jp_4: bt_jp_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_ls_on &bt BT_SEL 4>;
+        };
+
+        bt_jp_5: bt_jp_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_ls_on &bt BT_SEL 5>;
+        };
     };
 
     combos {
