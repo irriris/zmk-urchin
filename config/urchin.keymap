@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <layout_shift_kp_override.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 
 #define JP_UNDERSCORE   LS(0x87)          // _
 
@@ -46,6 +47,15 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
+
+        lclk_g: lclk_g {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&mkp_lclk>, <&kp>;
+        };
     };
 
     macros {
@@ -83,6 +93,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&tog_ls_on &bt BT_SEL 5>;
+        };
+
+        mkp_lclk: mkp_lclk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1>;
         };
     };
 
@@ -221,7 +237,7 @@
             label = "Base";
             bindings = <
 &kp Q            &kp W            &kp E                &kp R              &kp T    &kp Y  &kp U               &kp I                 &kp O             &kp P
-&hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G    &kp H  &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr RIGHT_GUI SEMI
+&hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &lclk_g G    &kp H  &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr RIGHT_GUI SEMI
 &kp Z            &kp X            &kp C                &kp V              &lt 4 B  &kp N  &kp M               &kp COMMA             &kp DOT           &kp SLASH
                                                        &lt 3 SPACE        &mo 1    &mo 2  &kp BACKSPACE
             >;
